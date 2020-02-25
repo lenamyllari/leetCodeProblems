@@ -5,8 +5,6 @@ public class IntSquareRoot {
 	public static void main(String args[]) {
 		int num = 8;
 		int sqrt = mySqrt(num);
-		//int num2 = 4;
-		//int sqr2 = mySqrt(num2);
 		System.out.println(sqrt);
 	}/*
 	private static int binarySearch(long low, long high, int x) {        
@@ -36,23 +34,18 @@ public class IntSquareRoot {
     	}
     	int max = x;
     	int min = 1;
-    	int middle=0;
     	while(min<max) {
-    		 middle = (max-min)/2 + min;
-    		System.out.println(middle + " middle");
-    		
-    		if(Math.floor(x/middle)==middle || x/middle<middle && x/(middle+1)>middle) {
-    			System.out.println("x " + x + " middle "+ middle + " / " + x/middle);
+    		int middle = (max-min)/2 + min;
+    		if(x/middle==middle) {
     			return middle;
     		}
     		else if(x/middle>middle) {
     			min = middle+1;
-    			
     		}
     		else {
     			max = middle;
     		}
     	}
-        return min;
+        return min-1;
     }
 }
